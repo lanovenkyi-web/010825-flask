@@ -1,11 +1,9 @@
 # sqlacodegen_v2 mysql+pymysql://ich1:ich1_password_ilovedbs@ich-edit.edu.itcareerhub.de:3306/social_blogs --outfile sqlalchemy_lessons/social_blogs_models.py
-from typing import Union
 
-from sqlalchemy import create_engine, select, or_, not_, and_, desc, func, alias
-from sqlalchemy.orm import sessionmaker, aliased, joinedload
+from sqlalchemy import create_engine, select
+from sqlalchemy.orm import joinedload
 
-from sqlalchemy_lessons.lesson_2.db_connector import DBConnector
-from sqlalchemy_lessons.lesson_2.social_blogs_models import *
+from lessons.sqlalchemy_lessons.lesson_2.db_connector import DBConnector
 
 engine = create_engine(
     url="mysql+pymysql://ich1:ich1_password_ilovedbs@ich-edit.edu.itcareerhub.de:3306/social_blogs",
